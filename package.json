@@ -1,7 +1,7 @@
 {
-  "name": "gulp-sass-es105-bolierplate",
+  "name": "gulp-sass-es2015-bolierplate",
   "version": "0.0.1",
-  "description": "a simple website to learn gulp",
+  "description": "a front-end boilerplate",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
