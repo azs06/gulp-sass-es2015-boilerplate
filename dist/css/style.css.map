@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAGA,KACC,qBAJe,AAKf,WAJsB,AAKtB,cAJuB,CAKvB","file":"style.css","sourcesContent":["$primary-bg: red;\r\n$primary-color: #ffffff;\r\n$default-font-size: 18px;\r\nbody{\r\n\tbackground-color: $primary-bg;\r\n\tcolor: $primary-color;\r\n\tfont-size: $default-font-size;\r\n}"],"sourceRoot":"/source/"}

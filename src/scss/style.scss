@@ -1,0 +1,8 @@
+$primary-bg: red;
+$primary-color: #ffffff;
+$default-font-size: 18px;
+body{
+	background-color: $primary-bg;
+	color: $primary-color;
+	font-size: $default-font-size;
+}
