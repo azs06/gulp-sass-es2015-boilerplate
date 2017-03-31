@@ -28,7 +28,6 @@ gulp watch
 ### Todo
 
 * Html minification
-* Html script injection
 * Production build
 
 

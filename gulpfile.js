@@ -1,19 +1,19 @@
 'use strict';
 
-var gulp = require('gulp');
-var gutil = require('gulp-util');
-var sourcemaps = require('gulp-sourcemaps');
-var source = require('vinyl-source-stream');
-var buffer = require('vinyl-buffer');
-var browserify = require('browserify');
-var watchify = require('watchify');
-var babelify = require('babelify');
-var uglify = require('gulp-uglify');
-var browserSync = require('browser-sync').create();
-var sass = require('gulp-sass');
-var cssnano = require('gulp-cssnano');
+const gulp = require('gulp');
+const gutil = require('gulp-util');
+const sourcemaps = require('gulp-sourcemaps');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
+const browserify = require('browserify');
+const watchify = require('watchify');
+const babelify = require('babelify');
+const uglify = require('gulp-uglify');
+const browserSync = require('browser-sync').create();
+const sass = require('gulp-sass');
+const cssnano = require('gulp-cssnano');
 
-var reload = browserSync.reload;
+const reload = browserSync.reload;
 
 function bundle(bundler){
 	return bundler
@@ -24,7 +24,7 @@ function bundle(bundler){
 		  	.pipe(source('bundle.js'))
 			.pipe(buffer())
     		.pipe(sourcemaps.init({loadMaps: true}))
-        		// Add transformation tasks to the pipeline here.
+			// Add transformation tasks to the pipeline here.
         	.pipe(uglify())
         	.on('error', gutil.log)
     		.pipe(sourcemaps.write('./'))
@@ -33,7 +33,8 @@ function bundle(bundler){
 }
 
 gulp.task('js:watch', function(){
-	var watcher = watchify(browserify('./src/js/app.js', { debug: true }).transform(babelify));
+	var watcher = watchify(browserify('./src/js/app.js', { debug: true })
+				  .transform(babelify));
 	bundle(watcher);
 	watcher.on('update', function(){
 		bundle(watcher)
